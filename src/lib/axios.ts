@@ -28,6 +28,7 @@ api.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
+      // npm install axios
       localStorage.removeItem('auth-storage');
       window.location.href = '/login';
     }
